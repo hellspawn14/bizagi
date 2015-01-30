@@ -55,7 +55,7 @@ function showToDoTasks() {
             activityName = allTasks[i].activity;
             requestDate = dateToString(allTasks[i].requestDate);
             employee = allTasks[i].employee;
-            cnt = "<div class='email-item email-item-unread pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='../img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
+            cnt = "<div class='email-item email-item-unread pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
 
             $("#list").append(cnt);
             cnt = "";
@@ -85,9 +85,9 @@ function showCompletedTasks() {
             requestDate = dateToString(allTasks[i].requestDate);
             employee = allTasks[i].employee;
             if (approved == "approve") {
-                cnt = "<div class='email-item email-item-aprovado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='../img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
+                cnt = "<div class='email-item email-item-aprovado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
             } else {
-                cnt = "<div class='email-item email-item-negado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='../img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
+                cnt = "<div class='email-item email-item-negado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
             }
             $("#list").append(cnt);
             cnt = "";
@@ -117,11 +117,11 @@ function showInbox() {
         employee = allTasks[i].employee;
         approved = allTasks[i].approved;
         if (approved == "approve") {
-            cnt = "<div class='email-item email-item-aprovado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='../img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
+            cnt = "<div class='email-item email-item-aprovado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
         } else if (approved == "reject") {
-            cnt = "<div class='email-item email-item-negado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='../img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
+            cnt = "<div class='email-item email-item-negado pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
         } else {
-            cnt = "<div class='email-item email-item-unread pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='../img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
+            cnt = "<div class='email-item email-item-unread pure-g' id='" + "item" + activityId + "' onclick=" + '"' + "showTaskDetails('" + activityId + "')" + '"' + "><div class='pure-u'><img class='email-avatar' height='64' width='64' src='img/generic-profile.png'></div><div class='pure-u-3-4'><h5 class='email-name'>" + employee + "</h5> <h4 class='email-subject'>" + process + " - " + activityName + "</h4> <p class='email-desc'>" + requestDate + "</p></div></div>";
         }
         $("#list").append(cnt);
     }
